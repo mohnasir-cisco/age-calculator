@@ -1,0 +1,132 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --LightRed: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --OffWhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --SmokeyGrey: hsl(0, 1%, 44%);
+  --OffBlack: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  background-color: var(--OffWhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--White);
+  padding: 2rem;
+  border-radius: 1rem;
+  border-bottom-right-radius: 8rem;
+  margin: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.dates-inputs {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  width: 80%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.input > label {
+  color: var(--SmokeyGrey);
+  font-size: 0.6rem;
+  letter-spacing: 0.2rem;
+}
+
+input {
+  height: 2.5rem;
+  width: 80%;
+  padding: 0.4rem;
+  border: 1px solid var(--Lightgrey);
+  border-radius: 5px;
+  outline: none;
+  color: var(--OffBlack);
+  font-weight: 800;
+}
+
+input:focus {
+  border: 1px solid var(--Purple);
+}
+
+.submit-button-container::before {
+  content: "";
+  border-top: 2px solid var(--OffWhite);
+  width: 100%;
+}
+
+.submit-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.submit-button-container > button {
+  border: 1px solid var(--Lightgrey);
+  background-color: var(--Purple);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.submit-button-container > button:hover {
+  background-color: var(--OffBlack);
+  cursor: pointer;
+}
+
+.result {
+  font-style: italic;
+  font-weight: 800;
+  color: var(--OffBlack);
+  font-size: 2.5rem;
+}
+
+.result span {
+  color: var(--Purple);
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    min-width: 300px;
+    height: 100%;
+    margin: 3rem 0.1rem 2rem 0.1rem;
+  }
+
+  .submit-button-container::after {
+    content: "";
+    border-top: 2px solid var(--OffWhite);
+    width: 100%;
+  }
+
+  .dates-inputs {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
